@@ -1,55 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
-        
-       <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-        
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    
-    
-    <body>
-        
-        <div id="title">
-            <h1><span class="underline">MYKONOS</span></h1>
-        </div>
-        
-        <p4>Mykonos is known as the Greek party island – but it’s much more than that! As a member of the Cycladic island group, Mykonos boasts stunning beaches, boutique shopping, whitewashed buildings, luxury hotels, and vibrant beach clubs and nightlife.</p4>
-        
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<h2>Here are the top 3 spots on the island of Mykonos!</h2>
+  <body>
+    <!-- The way you want to think about this is a div is a container, so if you're going to add a class/id to a container,
+         make sure it styles the container, rather than the h1 inside it. 
+         This is fine for small things like this and does 
+         work, but it gets a bit hard to understand when the project grows. 
+        so a div would have styling like padding, display flex, background color, border etc.
 
-        <div class="image">
-            <img src="images/ornos.jpg">
-            <img src="images/town.jpeg">
-            <img src="images/platys.jpg">
-        </div>
+        Ideal structure would be:
+        <div class='title-container'>
+            <h1 class="title">MYKONOS</h1>
+        </div>  
+     -->
+    <div id="title">
+      <h1><span class="underline">MYKONOS</span></h1>
+      <!-- We don't need the span inside a h1, a span would only be used if you wanted two 
+        things inline inside the H1, say an icon and text, so they sat beside each other. -->
+    </div>
 
-<div class="names">
+    <!-- a p4 isn't a HTML tag, think you might have meant h4, but in this case a p (paragraph) 
+        is fine here, and for other paragraphs on the site. Typically you'd have multiple p tags
+         on a page and if they had different styling, give them different classes. You never 
+         really directly style a html tag (h1, p, div) directly since they'll be reused so 
+         much it might have unintended consequences, if you wanted to add styles you would add 
+         a class  -->
+    <p4
+      >Mykonos is known as the Greek party island – but it’s much more than
+      that! As a member of the Cycladic island group, Mykonos boasts stunning
+      beaches, boutique shopping, whitewashed buildings, luxury hotels, and
+      vibrant beach clubs and nightlife.</p4
+    >
 
-         <p1> ORNOS BEACH </p1>
-         <p2 >MYKONOS TOWN </P2>
-         <p3 >PLATIS GIALOS</p3>
-</div>
+    <h2>Here are the top 3 spots on the island of Mykonos!</h2>
 
-<div class="describe">
-    <p5>Ornos is one of the most popular beaches on Mykonos, located just 3km from Mykonos Town. Easy to get to by public bus, it’s a great choice for families. </p5>
-    
-    <P6>Mykonos Town is ideal for travelers who want the island’s best nightlife, dining, and shopping. As the transportation hub of the island, the town makes a fantastic base to explore.</P6>
-    
-    <p7>Platis Gialos is the best beach on Mykonos, roughly 5km southeast of the town. Beautiful with many restaurants, cafes, mini-markets, jet skis and other water sports rentals, and also many excellent hotels.</p7>
-</div>
+    <!-- i'd give a more descriptive class name here e.g. "image-container" -->
+    <div class="image">
+      <img src="images/ornos.jpg" />
+      <img src="images/town.jpeg" />
+      <img src="images/platys.jpg" />
+    </div>
 
-    </body>
+    <!--  same here, "location-containers" -->
+    <div class="names">
+      <p1> ORNOS BEACH </p1>
+      <p2>MYKONOS TOWN </p2>
+      <p3>PLATIS GIALOS</p3>
+      <!-- these should all be h3, or p tags -->
+    </div>
+
+    <div class="describe">
+        <!-- these should all be p tags with classes to style them -->
+        <!-- <p class="p5"> ... </p> is fine -->
+      <p5
+        >Ornos is one of the most popular beaches on Mykonos, located just 3km
+        from Mykonos Town. Easy to get to by public bus, it’s a great choice for
+        families.
+      </p5>
+
+      <P6
+        >Mykonos Town is ideal for travelers who want the island’s best
+        nightlife, dining, and shopping. As the transportation hub of the
+        island, the town makes a fantastic base to explore.</P6
+      >
+
+      <p7
+        >Platis Gialos is the best beach on Mykonos, roughly 5km southeast of
+        the town. Beautiful with many restaurants, cafes, mini-markets, jet skis
+        and other water sports rentals, and also many excellent hotels.</p7
+      >
+    </div>
+  </body>
 </html>
+
+<!-- Good work lad,  -->
